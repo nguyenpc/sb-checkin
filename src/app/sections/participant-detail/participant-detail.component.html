@@ -1,0 +1,25 @@
+<div *ngIf="participant">
+    <form>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input [(ngModel)]="participant.fullname" name="fullname" />
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input [(ngModel)]="participant.email" name="email" />
+        </div>
+        <div class="form-group">
+            <label>Age</label>
+            <input [(ngModel)]="participant.age" name="age" />
+        </div>
+        <div class="form-group">
+            <label>Checked In?</label>
+            <input [(ngModel)]="participant.status" type="checkbox" name="status" />
+        </div>
+        <div class="actions">
+            <button type="button" (click)="back($event)">Back</button>
+            <button  type="submit" (click)="update($event)">Submit</button>
+        </div>
+    </form>
+</div>

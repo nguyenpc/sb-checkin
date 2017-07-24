@@ -1,0 +1,25 @@
+:host {
+    .participant {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 17px;
+        height: 100%;
+        color: #fff;
+        background: #607D8B;
+        &:hover,
+        &.checked-in:hover {
+            background: #EEE;
+            cursor: pointer;
+            color: #607d8b;
+        }
+        &.checked-in {
+            background: #7fc35c;
+        }
+        p {
+            margin: 0px;
+        }
+    }
+    
+}

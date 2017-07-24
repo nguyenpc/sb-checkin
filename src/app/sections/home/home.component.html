@@ -1,0 +1,5 @@
+<button class="register-button" (click)="register($event)">Register New Participant</button>
+<div class="participant-list">
+    <participant-tile [routerLink]="['/participant', people.id]" [participant]="people" *ngFor="let people of listParticipant">
+    </participant-tile>
+</div> 
