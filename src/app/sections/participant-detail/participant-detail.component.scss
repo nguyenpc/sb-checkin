@@ -19,5 +19,12 @@
         button {
             margin: 20px;
         }
+        .delete {
+            align-self: center;
+            font-size: 15px;
+            color: red;
+            text-decoration: underline;
+            cursor: pointer;
+        }
     }
 }

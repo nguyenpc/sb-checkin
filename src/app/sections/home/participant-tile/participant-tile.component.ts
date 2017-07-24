@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Participant } from '../../models/participant';
+import { Participant } from '../../../models/participant';
 
 
 @Component({

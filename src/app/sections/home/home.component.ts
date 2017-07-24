@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 import { CommonModule } from '@angular/common';
 import { ParticipantService } from '../participant.service';
 import { Router } from '@angular/router';
-import { HeaderService } from '../../shared/header/header.service';
+import { HeaderService } from '../../shell/header/header.service';
 
 @Component({
     templateUrl: './home.component.html',

@@ -6,13 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from 'app/app.routing';
 import { HomeComponent } from './sections/home/home.component';
-import { HeaderComponent } from './shared/header/header.component';
+import { HeaderComponent } from './shell/header/header.component';
 import { CommonModule } from '@angular/common';
 import { ParticipantService } from './sections/participant.service';
-import { ParticipantTileComponent } from './shared/participant-tile/participant-tile.component';
+import { ParticipantTileComponent } from './sections/home/participant-tile/participant-tile.component';
 import { RegisterComponent } from './sections/register/register.component';
 import { ParticipantDetailComponent } from './sections/participant-detail/participant-detail.component';
-import { HeaderService } from './shared/header/header.service';
+import { HeaderService } from './shell/header/header.service';
 
 @NgModule({
   declarations: [

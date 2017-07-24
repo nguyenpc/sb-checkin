@@ -30,7 +30,12 @@ export class ParticipantDetailComponent implements OnInit {
         );
     }
 
+    delete() {
+        this.participantService.delete(this.participant).subscribe(
+            data => this.router.navigate(['/'])
+        );
+    }
     back() {
-        this.router.navigate(['/'])
+        this.router.navigate(['/']);
     }
 }

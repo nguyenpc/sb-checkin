@@ -25,4 +25,8 @@ export class ParticipantService {
         return this.http.put(this.endpoint + '/' + people.id, people)
             .map((res: Response) => res.json());
     }
+    delete(people: Participant) {
+        return this.http.delete(this.endpoint + '/' + people.id)
+            .map((res: Response) => res.json());
+    }
 }
