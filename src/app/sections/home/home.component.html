@@ -1,5 +1,10 @@
-<button class="register-button" (click)="register($event)">Register New Participant</button>
+<button class="register-button" (click)="register($event)">
+    {{buttonLabel}}
+</button>
+
 <div class="participant-list">
-    <participant-tile [routerLink]="['/participant', people.id]" [participant]="people" *ngFor="let people of listParticipant">
+    <participant-tile [routerLink]="['/participant', people.id]" 
+        [participant]="people" *ngFor="let people of listParticipant"
+        (participantSelected)="notify($event)">
     </participant-tile>
-</div> 
+</div>

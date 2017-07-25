@@ -14,11 +14,16 @@ import { HeaderService } from '../../shell/header/header.service';
 
 export class HomeComponent implements OnInit {
     listParticipant: Array<Participant>;
+    buttonLabel: string = 'Register New Participant';
     constructor(private participantService: ParticipantService, private router: Router, private headerService: HeaderService) {
 
     }
     ngOnInit(): void {
         this.loadData();
+    }
+
+    notify(name: string) {
+        alert(`Participant ${name} selected!`);
     }
 
     loadData() {
