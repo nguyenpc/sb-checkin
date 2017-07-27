@@ -13,6 +13,7 @@ import { ParticipantTileComponent } from './sections/home/participant-tile/parti
 import { RegisterComponent } from './sections/register/register.component';
 import { ParticipantDetailComponent } from './sections/participant-detail/participant-detail.component';
 import { HeaderService } from './shell/header/header.service';
+import { tileHighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HeaderService } from './shell/header/header.service';
     HeaderComponent,
     ParticipantTileComponent,
     RegisterComponent,
-    ParticipantDetailComponent
+    ParticipantDetailComponent,
+    tileHighlightDirective
   ],
   imports: [
     BrowserModule,

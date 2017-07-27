@@ -1,10 +1,10 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Participant } from '../../../models/participant';
 @Component({
-    selector: 'participant-tile',    
+    selector: 'participant-tile',
     styleUrls: ['./participant-tile.component.scss'],
     template: `
-        <div (click)="onSelectParticipant()" 
+        <div tileHighlight (click)="onSelectParticipant()" 
             class="participant" [ngClass]="{'checked-in': participant.status}">
             <p>{{participant.fullname}} </p>
             <p>Age: {{participant.age}}</p>

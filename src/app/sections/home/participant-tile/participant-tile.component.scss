@@ -8,12 +8,6 @@
         height: 100%;
         color: #fff;
         background: #607D8B;
-        &:hover,
-        &.checked-in:hover {
-            background: #EEE;
-            cursor: pointer;
-            color: #607d8b;
-        }
         &.checked-in {
             background: #7fc35c;
         }
