@@ -14,7 +14,9 @@ import 'rxjs/add/operator/switchMap';
 
 export class ParticipantDetailComponent implements OnInit {
     participant = new Participant();
-    constructor(private participantService: ParticipantService, private router: Router, private route: ActivatedRoute) {
+    constructor(private participantService: ParticipantService,
+        private router: Router,
+        private route: ActivatedRoute) {
 
     }
     ngOnInit(): void {
@@ -22,7 +24,9 @@ export class ParticipantDetailComponent implements OnInit {
             .switchMap((params: Params) =>
                 this.participantService.get(+params['id'])
             )
-            .subscribe(participant => this.participant = participant);
+            .subscribe(participant => {
+                this.participant = participant;
+            });
     }
     update() {
         this.participantService.update(this.participant).subscribe(
