@@ -2,15 +2,17 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 @Directive({
     selector: '[tileHighlight]'
 })
-export class tileHighlightDirective {
-    @Input() isCheckedIn: boolean;
+export class TileHighlightDirective {
+    @Input() backgroundColor: string;
     constructor(private el: ElementRef) { }
 
-    @HostListener('mouseenter') onMouseEnter() {
+    @HostListener('mouseenter')
+    onMouseEnter() {
         this.highlight('#EEE', '#607d8b', 'pointer');
     }
 
-    @HostListener('mouseleave') onMouseLeave() {
+    @HostListener('mouseleave')
+    onMouseLeave() {
         this.highlight(null);
     }
 
@@ -20,3 +22,4 @@ export class tileHighlightDirective {
         this.el.nativeElement.style.cursor = cursor;
     }
 }
+

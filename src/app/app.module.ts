@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from 'app/app.routing';
@@ -13,7 +13,7 @@ import { ParticipantTileComponent } from './sections/home/participant-tile/parti
 import { RegisterComponent } from './sections/register/register.component';
 import { ParticipantDetailComponent } from './sections/participant-detail/participant-detail.component';
 import { HeaderService } from './shell/header/header.service';
-import { tileHighlightDirective } from './directives/highlight.directive';
+import { TileHighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -23,12 +23,12 @@ import { tileHighlightDirective } from './directives/highlight.directive';
     ParticipantTileComponent,
     RegisterComponent,
     ParticipantDetailComponent,
-    tileHighlightDirective
+    TileHighlightDirective
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule,
-    HttpModule,
     AppRoutingModule,
     CommonModule
   ],
